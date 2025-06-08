@@ -226,6 +226,163 @@ p {
     gap: 10px;
   }
 }
+/* About Section */
+/* About Section */
+#about {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+.about-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  animation: glow 2s infinite alternate;
+}
+
+.about-paragraph {
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+  line-height: 1.8;
+  animation: slideUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-paragraph:nth-of-type(1) { animation-delay: 0.2s; }
+.about-paragraph:nth-of-type(2) { animation-delay: 0.4s; }
+.about-paragraph:nth-of-type(3) { animation-delay: 0.6s; }
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00bcd4;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 28px;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+  }
+
+  .about-container {
+    padding: 25px 20px;
+  }
+}
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00bcd4;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+  }
+
+  .about-container {
+    padding: 20px;
+  }
+}
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #00bcd4;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 30px;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+  }
+}
+
 
 /* Footer */
 .footer-content {
