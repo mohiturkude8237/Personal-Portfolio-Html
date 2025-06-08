@@ -15,7 +15,9 @@ body
     height:70px;
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
     flex-wrap:wrap;
 }
@@ -53,4 +55,10 @@ a:hover
     text-decoration: underline; 
     text-underline-position:under;
     text-decoration-style:dotted;
+}
+/**************************Heading Section**************************/
+.heading
+{
+background-color: rgb(35, 37,58);
+
 }
