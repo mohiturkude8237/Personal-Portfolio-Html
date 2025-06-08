@@ -127,28 +127,37 @@
   </div>
 </section>
 
-<!-- contact section -->
  <!-- Contact Section -->
 <section class="contact" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-  <div class="contact-container">
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="contact-wrapper">
     <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Subject" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <div class="form-group">
+        <input type="text" required>
+        <label>Your Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" required>
+        <label>Your Email</label>
+      </div>
+      <div class="form-group">
+        <input type="text" required>
+        <label>Subject</label>
+      </div>
+      <div class="form-group">
+        <textarea rows="5" required></textarea>
+        <label>Your Message</label>
+      </div>
+      <button type="submit" class="btn-submit">Send Message</button>
     </form>
-    <div class="social-links">
-      <a href="https://github.com/yourusername" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:your.email@example.com">
-        <i class="fas fa-envelope"></i>
-      </a>
+
+    <div class="contact-info">
+      <p>I’m currently open to new opportunities. Whether you have a question or just want to say hi — I’ll try my best to get back to you!</p>
+      <div class="social-icons">
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
   </div>
 </section>
@@ -179,6 +188,39 @@
     nextStringDelay: 1500
   }).go();
 </script>
+
+
+<!-- form submission -->
+ <script>
+  const form = document.querySelector(".contact-form");
+  const successMsg = document.createElement("p");
+  successMsg.textContent = "✅ Message sent successfully!";
+  successMsg.style.color = "#00e5ff";
+  successMsg.style.marginTop = "15px";
+  successMsg.style.fontWeight = "bold";
+  successMsg.style.display = "none";
+  form.appendChild(successMsg);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Optional: validate here manually if needed
+
+    // Simulate message sending
+    successMsg.style.display = "none";
+    const submitBtn = form.querySelector(".btn-submit");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    setTimeout(() => {
+      successMsg.style.display = "block";
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+      form.reset();
+    }, 1500); // Simulate 1.5 sec delay
+  });
+</script>
+
 
 </body>
 </html>

@@ -413,6 +413,144 @@ p {
     padding: 20px 15px;
   }
 }
+/* contact section */
+.contact {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00e5ff;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: #1e2a38;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-form label {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  pointer-events: none;
+  color: #aaa;
+  transition: 0.3s ease all;
+}
+
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  background: #2c5364;
+  padding: 0 5px;
+  color: #00e5ff;
+}
+
+.btn-submit {
+  background: #00e5ff;
+  color: #000;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 24px;
+  color: #00e5ff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
 
 
 /* Animations */
@@ -536,7 +674,6 @@ p {
   background-color: rgb(31, 34, 53);
   color: white;
   padding: 20px;
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
